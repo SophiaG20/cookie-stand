@@ -1,0 +1,9 @@
+html {
+    font-size: 62.5%;
+    font-style: Helvetica;
+    color: #333;
+    background: #fff;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
