@@ -24,7 +24,7 @@ hourlySales: function () {
     }
 }   
 },
-render: function () {
+render() {
     this.hourlySales();
     let section = document.getElementById('seattle');
     let header = document.createElement('h2');
@@ -39,7 +39,6 @@ render: function () {
     let total = document.createElement('li');
     list.appendChild(total);
     total.textContent = `Total: ${this.totalCookiesSold} cookies`;
-    }
 };
 let tokyo = {
     city: 'Tokyo',
