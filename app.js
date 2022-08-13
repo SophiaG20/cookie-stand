@@ -18,27 +18,27 @@ let seattle = {
 
 hourlySales: function () {
     for (let i = 0; i < hours.length; i++) {
-        let cookies = Math.ceil(this.randomSalestPerHour() * this.avgCookies);
+        let cookies = Math.ceil(this.randomSalestPerHour() * this.avg);
         this.CookiesPerHour.push(cookies);
         this.totalCookiesSold += cookies;
     }
-}   
-},
+}   ,
 render() {
     this.hourlySales();
-    let section = document.getElementById('seattle');
-    let header = document.createElement('h2');
-    section.appendChild(header);
-    header.textContent = this.city;
-    let list = document.createElement('ul');
+    let list = document.getElementById('seattle');
+    // let header = document.createElement('h2');
+    // section.appendChild(header);
+    // header.textContent = this.city;
+    // let list = document.createElement('ul');
     for (let i = 0; i < hours.length; i++) {
         let listItem = document.createElement('li');
-        list.appendChild(listItem);
         listItem.textContent = `${hours[i]}: ${this.CookiesPerHour[i]} cookies`;
+        list.appendChild(listItem);
     }
     let total = document.createElement('li');
     list.appendChild(total);
     total.textContent = `Total: ${this.totalCookiesSold} cookies`;
+}
 };
 let tokyo = {
     city: 'Tokyo',
